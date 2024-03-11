@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 import "../global.css";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
@@ -16,6 +18,11 @@ import Footer from "@/components/Footer";
 const inter = Inter({
   subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+  title: "Onborda Demo - Next.js Onboarding Flow!",
+  description: "A modern onboarding flow for Next.js applications!",
+};
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -43,6 +50,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             </Onborda>
           </OnbordaProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
