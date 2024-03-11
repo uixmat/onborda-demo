@@ -29,15 +29,17 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <div className="relative flex flex-col items-center justify-center w-full min-h-[600px] bg-gradient-to-br from-fuchsia-500 to-violet-700 rounded-3xl space-y-8 p-5 overflow-clip">
-        <h1 className="text-[48px] font-bold text-secondary/90">Onborda</h1>
+        <h1 className="text-3xl lg:text-[48px] font-bold text-card-foreground/90">
+          Onborda
+        </h1>
         <div>
-          <p className="text-lg text-secondary/90">
+          <p className="text-lg text-card-foreground/70">
             Give your application the onboarding it deserves with{" "}
             <b>Onborda product tour</b> for Next.js 🪄✨
           </p>
         </div>
         <div className="flex flex-col items-center space-y-4">
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 lg:flex-row">
             <Button size="lg" onClick={handleStartOnborda}>
               <Sparkles size={16} className="mr-2" /> Start the tour
             </Button>
@@ -47,7 +49,7 @@ export default function HomePage() {
               {/* </Link> */}
             </Button>
           </div>
-          <code className="px-4 py-2 text-xs rounded-md bg-foreground/20 text-secondary">
+          <code className="px-4 py-2 text-xs text-white rounded-md bg-black/20">
             ~ pnpm install onborda
           </code>
         </div>

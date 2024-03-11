@@ -8,7 +8,7 @@ import { Card, CardHeader, CardContent } from "../ui/card";
 
 export default function Features() {
   return (
-    <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 lg:gap-10 lg:grid-cols-3">
       <Card id="onborda-step1">
         <CardHeader>
           <div className="flex items-center gap-2 font-medium">

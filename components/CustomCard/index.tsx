@@ -4,6 +4,8 @@ import type { CardComponentProps } from "onborda";
 import { useOnborda } from "onborda";
 import { XIcon } from "lucide-react";
 
+import confetti from "canvas-confetti";
+
 // Shadcn
 import { Button } from "@/components/ui/button";
 import {
@@ -26,8 +28,17 @@ const CustomCard: React.FC<CardComponentProps> = ({
   // Onborda hooks
   const { closeOnborda } = useOnborda();
 
+  function handleConfetti() {
+    closeOnborda();
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  }
+
   return (
-    <Card className="border-0 rounded-3xl">
+    <Card className="border-0 rounded-3xl max-w-vw">
       <CardHeader>
         <div className="flex items-start justify-between w-full">
           <div>
@@ -52,6 +63,11 @@ const CustomCard: React.FC<CardComponentProps> = ({
           {currentStep + 1 !== totalSteps && (
             <Button onClick={() => nextStep()} className="ml-auto">
               Next
+            </Button>
+          )}
+          {currentStep + 1 === totalSteps && (
+            <Button onClick={() => handleConfetti()} className="ml-auto">
+              🎉 Finish!
             </Button>
           )}
         </div>

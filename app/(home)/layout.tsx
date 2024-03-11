@@ -34,7 +34,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               shadowOpacity="0.8"
             >
               <main className="flex flex-col h-screen text-center">
-                <div className="container p-10 space-y-10">
+                <div className="container py-4 space-y-4 lg:space-y-10 lg:py-10">
                   {children}
 
                   <Footer />
