@@ -45,8 +45,8 @@ dependencies:
     specifier: ^0.2.1
     version: 0.2.1(next@14.1.3)(react-dom@18.2.0)(react@18.2.0)
   onborda:
-    specifier: ^1.2.1
-    version: link:../Onborda
+    specifier: ^1.2.2
+    version: 1.2.2(framer-motion@11.0.8)(next@14.1.3)(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -2648,6 +2648,20 @@ packages:
   /object-hash@3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
     engines: {node: '>= 6'}
+
+  /onborda@1.2.2(framer-motion@11.0.8)(next@14.1.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-0TMg1d/i13jB0/1OQR0UCe9jqYBTt+9FYUz2ec8aEKDncPGC6y0hlfhrWkfrw/eDrtfPby+XH4gVCiqL2mDJ/Q==}
+    peerDependencies:
+      framer-motion: '>=11'
+      next: '>=13'
+      react: '>=18'
+      react-dom: '>=18'
+    dependencies:
+      framer-motion: 11.0.8(react-dom@18.2.0)(react@18.2.0)
+      next: 14.1.3(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /parse-entities@4.0.1:
     resolution: {integrity: sha512-SWzvYcSJh4d/SGLIOQfZ/CoNv6BTlI6YEQ7Nj82oDVnRpwe/Z/F1EMx42x3JAOwGBlCjeCH0BRJQbQ/opHL17w==}
